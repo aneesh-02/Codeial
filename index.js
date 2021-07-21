@@ -11,3 +11,7 @@ app.listen(port, function(err)
 
     console.log("The app is running on port", port);
 });
+
+
+// use express router 
+app.use("/", require("./routes"));
