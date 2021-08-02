@@ -15,4 +15,3 @@ router.use("/posts", require("./posts")); // works on localhost:8000/posts/posts
 
 
 module.exports = router; 
-
