@@ -5,6 +5,12 @@ const port = 8000;
 const expressLayout = require("express-ejs-layouts");
 app.use(expressLayout);
 
+// look for files in assets folder
+app.use(express.static("./assets"));
+
+app.set("layout extractStyles", true);
+app.set("layout extractScripts", true);
+
 app.listen(port, function(err)
 {
     if(err)
