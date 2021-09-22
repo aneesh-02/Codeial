@@ -1,3 +1,4 @@
+// 1) initialise express
 const express = require("express");
 const app = express();
 const port = 8000;
@@ -14,6 +15,7 @@ app.use(express.static("./assets"));
 app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
+// 2) listen on port
 app.listen(port, function(err)
 {
     if(err)
@@ -25,7 +27,7 @@ app.listen(port, function(err)
 });
 
 
-// use express router 
+//3) use express router 
 app.use("/", require("./routes"));
 
 // set up the view engine
