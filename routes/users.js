@@ -6,5 +6,9 @@ const router = express.Router();
 const usersController = require("../controllers/users_controller");
 router.get("/profile", usersController.profile);
 
+// 4) 
+router.get("/sign-up", usersController.signUp);
+router.get("/sign-in", usersController.signIn);
+
 // 2)
 module.exports = router;
