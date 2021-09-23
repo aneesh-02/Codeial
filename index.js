@@ -3,13 +3,14 @@ const express = require("express");
 const app = express();
 const port = 8000;
 
-// requiremongoose in app
+//7) require mongoose in app
 const db = require("./config/mongoose");
 
+// 5) require layouts library 
 const expressLayout = require("express-ejs-layouts");
 app.use(expressLayout);
 
-// look for files in assets folder
+//6) look for files in assets folder
 app.use(express.static("./assets"));
 
 app.set("layout extractStyles", true);
@@ -30,6 +31,6 @@ app.listen(port, function(err)
 //3) use express router 
 app.use("/", require("./routes"));
 
-// set up the view engine
+//4) set up the view engine
 app.set("view engine", "ejs");
 app.set("views", "./views");
