@@ -20,3 +20,16 @@ module.exports.signIn = function(req,res)
         title: "COdial | Sign In"
     })
 }
+
+// get the signup data
+module.exports.create = function(req,res)
+{
+    // TODO
+}
+
+
+// signin and create the sesion for the user
+module.exports.createSession = function(req,res)
+{
+    // TODO
+}

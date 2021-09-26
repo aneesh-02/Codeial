@@ -6,6 +6,11 @@ const port = 8000;
 //7) require mongoose in app
 const db = require("./config/mongoose");
 
+// 8) require cookie library
+const cookieParser =  require("cookie-parser");
+app.use(express.urlencoded()); // reading thru the post request
+app.use(cookieParser()); //setting up the cookie parser
+
 // 5) require layouts library 
 const expressLayout = require("express-ejs-layouts");
 app.use(expressLayout);
@@ -34,3 +39,4 @@ app.use("/", require("./routes"));
 //4) set up the view engine
 app.set("view engine", "ejs");
 app.set("views", "./views");
+
